@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- use this color #578fca -->
+         <style>
+            *{
+                margin: 0px;
+                padding: 0px;
+                box-sizing: border-box;
+            }
+
+            body {
+                background: linear-gradient(to right, pink, blue);
+                width: 100%;
+                height: 100vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .sign-up {
+                background: linear-gradient(to right bottom, lightpink, lightblue);
+                border: 1px solid black;
+                width: 370px;
+                height: 450px;
+                display: flex;
+                align-items: center;
+                flex-direction: column;
+                padding-top: 30px;
+                border-radius: 12px;
+                box-shadow: 10px 10px 25px lightblue, -10px -10px 25px blue;
+                animation: shadow 1s linear infinite;
+            }
+
+            @keyframes shadow {
+                0%{
+                    box-shadow: 10px 10px 25px lightblue, -10px -10px 25px blue;
+                }
+                25%{
+                    box-shadow: 10px -10px 30px lightblue, -10px 10px 30px blue;
+                }
+                50%{
+                    box-shadow: -10px -10px 35px lightblue, 10px 10px 35px blue;
+                }
+                75%{
+                    box-shadow: -10px 10px 30px lightblue, 10px -10px 30px blue;
+                }
+                100%{
+                    box-shadow: 10px 10px 25px lightblue, -10px -10px 25px blue;
+                }
+            }
+
+            .sign-up input {
+                border: 2px solid black;
+                /* border: none; */
+                width: 270px;
+                height: 45px;
+                border-radius: 10px;
+                display: block;
+                margin: 18px;
+                padding-left: 12px;
+                font-size: 18px;
+            }
+
+            .input {
+                padding-top: 35px;
+            }
+
+            .sign-up input::placeholder {
+                font-size: 17px;
+            }
+            
+            .btn {
+                width: 110px;
+                height: 40px;
+                font-size: 16px;
+                color: white;
+                background-color: blue;
+                width: 270px;
+                border-radius: 12px;
+                font-weight: 600;
+                border: none;
+                cursor: pointer;
+            }
+            .sign-up p {
+                margin-top: 22px;
+                font-size: 18px;
+            }
+
+         </style>
+    </head>
+    <body>
+        <div class="sign-up">
+            <h1>Login in</h1>
+            <div class="input">
+                <input type="text" placeholder="Enter your Name" required>
+                <input type="password" placeholder="Password" required>
+            </div>
+            <button class="btn">Sign Up</button>
+            <p>If you don't have an account? <a href="Web/Sign up.html">Sign up</a></p>
+        </div>
+    </body>
+</html>

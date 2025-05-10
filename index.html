@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Responsive Layout</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@400;700&display=swap');
+
+        body {
+            margin: 0;
+            font-family: 'Ubuntu', sans-serif;
+        }
+
+        /* ==================== Navbar ==================== */
+        .navbar {
+            background-color: #578fca;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            padding: 6px 20px;
+            height: 50px;
+            margin-top: 22px;
+            border-top-right-radius: 50px;
+            border-bottom-right-radius: 50px;
+            position: relative;
+        }
+
+        .logo {
+            font-size: 24px;
+            color: white;
+            font-weight: bold;
+            margin-right: 30px;
+        }
+
+        .navbar ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            flex-wrap: wrap;
+        }
+
+        .navbar li {
+            margin-left: 20px;
+        }
+
+        .navbar a {
+            text-decoration: none;
+            color: white;
+            font-weight: 600;
+            font-size: 20px;
+        }
+
+        .hamburger {
+            display: none;
+            flex-direction: column;
+            cursor: pointer;
+            position: absolute;
+            right: 20px;
+        }
+
+        .hamburger div {
+            width: 25px;
+            height: 3px;
+            background-color: white;
+            margin: 4px 0;
+        }
+
+        /* ==================== Content ==================== */
+        .firstslide {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .img1,
+        .img2 {
+            width: 320px;
+            height: 450px;
+        }
+
+        .centercontext {
+            width: 600px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            padding-top: 150px;
+        }
+
+        .centercontext h1 {
+            color: #5271ff;
+            font-size: 30px;
+            margin: 0px;
+        }
+
+        .centercontext p {
+            text-align: center;
+            font-size: 20px;
+            color: #666977;
+            width: 530px;
+            margin: 12px 0 0;
+        }
+
+        .btn {
+            margin-top: 20px;
+            border: 3px solid rgb(83, 83, 255);
+            background-color: #ffffff;
+            width: 120px;
+            height: 40px;
+            border-radius: 20px;
+            cursor: pointer;
+            font-size: 16px;
+            box-shadow: 0 0 15px rgb(83, 83, 255);
+            animation: pulseGlow 2s infinite ease-in-out;
+            transition: all 0.1s ease;
+        }
+
+        @keyframes pulseGlow {
+            0% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgb(83, 83, 255);
+            }
+
+            50% {
+                transform: scale(1.05);
+                box-shadow: 0 0 25px rgb(83, 83, 255), 0 0 10px rgb(83, 83, 255);
+            }
+
+            100% {
+                transform: scale(1);
+                box-shadow: 0 0 15px rgb(83, 83, 255);
+            }
+        }
+
+
+        .btn:hover {
+            background-color: rgb(64, 64, 199);
+            color: white;
+        }
+
+        /* ==================== Responsive ==================== */
+        @media (max-width: 1024px) {
+            .firstslide {
+                flex-direction: column;
+                align-items: center;
+                padding: 20px;
+            }
+
+            .img1,
+            .img2 {
+                width: 90%;
+                max-width: 250px;
+                height: auto;
+                margin-bottom: 20px;
+            }
+
+            .centercontext {
+                width: 90%;
+                padding-top: 20px;
+            }
+
+            .centercontext h1 {
+                font-size: 24px;
+            }
+
+            .centercontext p {
+                font-size: 16px;
+                width: 90%;
+            }
+
+            .btn {
+                width: 100px;
+                height: 35px;
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .navbar ul {
+                display: none;
+                flex-direction: column;
+                background-color: #578fca;
+                width: 100%;
+                position: absolute;
+                top: 60px;
+                left: 0;
+                padding-bottom: 10px;
+            }
+
+            .navbar.active ul {
+                display: flex;
+            }
+
+            .hamburger {
+                display: flex;
+            }
+
+            .firstslide {
+                flex-direction: column;
+            }
+
+            .img1,
+            .img2 {
+                width: 80%;
+                max-width: 220px;
+                height: auto;
+            }
+
+            .centercontext h1 {
+                font-size: 20px;
+            }
+
+            .centercontext p {
+                font-size: 14px;
+            }
+
+            .btn {
+                width: 90px;
+                height: 30px;
+                font-size: 13px;
+            }
+        }
+
+        @media (max-width: 480px) {
+
+            .img1,
+            .img2 {
+                width: 75%;
+                max-width: 200px;
+            }
+
+            .centercontext h1 {
+                font-size: 18px;
+            }
+
+            .centercontext p {
+                font-size: 12px;
+            }
+
+            .btn {
+                width: 80px;
+                height: 28px;
+                font-size: 12px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <nav class="navbar" id="navbar">
+            <div class="logo">SHAKEB</div>
+            <ul>
+                <!-- <li><a href="#">Home</a></li> -->
+                <li><a href="pyqs.html">Previous Year Papers</a></li>
+                <li><a href="notes.html">Notes</a></li>
+                <li><a href="about-us.html">About Us</a></li>
+                <li><a href="Sign up.html">Sign up/Login</a></li>
+            </ul>
+            <div class="hamburger" onclick="toggleMenu()">
+                <div></div>
+                <div></div>
+                <div></div>
+            </div>
+        </nav>
+    </header>
+
+    <div class="firstslide">
+        <img src="https://i.ibb.co/bMP6b2Zw/Gemini-Generated-Image-6y5aui6y5aui6y5a-new.jpg" class="img1">
+        <div class="centercontext">
+            <h1>Master Your Exams with Our Resources</h1>
+            <p>
+                One of the best ways to prepare for exams is by practicing with previous year papers.
+                At [Your Website Name], we provide an extensive collection of past exam papers, allowing you to
+                familiarize yourself with the format, question patterns, and difficulty level of previous exams.
+                Practicing these papers will not only help you gauge your preparation but also enhance your time
+                management skills, making you more confident and efficient on exam day.
+            </p>
+            <button class="btn">Let's Start</button>
+        </div>
+        <img src="https://i.ibb.co/yBQYvhrX/Gemini-Generated-Image-k8y80ak8y80ak8y8.jpg" class="img2">
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.getElementById("navbar").classList.toggle("active");
+        }
+    </script>
+
+</body>
+
+</html>

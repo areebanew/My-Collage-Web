@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Semester Selection</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+
+    body {
+      height: 100vh;
+      width: 100%;
+      /* background: linear-gradient(135deg, #00b4db, #0083b0); */
+      background: linear-gradient(to right, #6a11cb, #2575fc);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+    }
+
+    .container {
+      background-color: #ffffff;
+      width: 100%;
+      max-width: 1000px;
+      border-radius: 12px;
+      box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+      padding: 30px;
+    }
+
+    .container h1 {
+      text-align: center;
+      margin-bottom: 20px;
+      color: #0083b0;
+    }
+
+    .small-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 20px;
+      padding: 10px;
+    }
+
+    .sem {
+      background-color: #f7f7f7;
+      width: 200px;
+      height: 180px;
+      border-radius: 12px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      padding: 20px;
+      margin: 0px 15px;
+      cursor: pointer;
+      box-shadow: 0px 5px 15px rgba(0,0,0,0.1);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .sem:hover {
+      transform: scale(1.07);
+      box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+      background-color: #e0f7fa;
+    }
+
+    .sem h2 {
+      font-size: 18px;
+      color: #007b9e;
+    }
+
+    .sem h2 a {
+        /* border: 2px solid black; */
+        text-decoration: none;
+        color: #007b9e;
+        width: 200px;
+        height: 180px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    @media (max-width: 768px) {
+      .sem {
+        width: 45%;
+        height: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .sem {
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Select Your Semester</h1>
+    <hr>
+    <div class="small-container">
+      <div class="sem" id="sem-1"><h2><a href="#">Semester First</a></h2></div>
+      <div class="sem" id="sem-2"><h2><a href="#">Semester Second</a></h2></div>
+      <div class="sem" id="sem-3"><h2><a href="#">Semester Third</a></h2></div>
+
+      <div style="flex-basis: 100%; height: 0;"></div> <!-- Line Break -->
+
+      <div class="sem" id="sem-4"><h2><a href="pyqs-1.html">Semester Fourth</a></h2></div>
+      <div class="sem" id="sem-5"><h2><a href="#">Semester Fifth</a></h2></div>
+      <div class="sem" id="sem-6"><h2><a href="#">Semester Sixth</a></h2></div>
+    </div>
+  </div>
+</body>
+</html>
